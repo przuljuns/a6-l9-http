@@ -14,4 +14,20 @@ export class KontoService {
   getAllKontos(): Observable<Konto[]> {
     return this.httpClient.get<Konto[]>(environment.API_URL + 'konto');
   }
+
+  getKonto(id: number): Observable<Konto> {
+    return this.httpClient.get<Konto>(environment.API_URL + 'konto/' + id);
+  }
+
+  insertKonto(konto: Konto): Observable<Object> {
+    return this.httpClient.post(environment.API_URL + 'konto/', konto);
+  }
+
+  updateKonto(konto: Konto): Observable<Object> {
+    return this.httpClient.put(environment.API_URL + 'konto/' + konto.id, konto);
+  }
+
+  deleteKonto(id: number): Observable<Object> {
+    return this.httpClient.delete(environment.API_URL + 'konto/' + id);
+  }
 }
