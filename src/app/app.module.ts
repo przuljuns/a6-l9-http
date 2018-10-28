@@ -5,15 +5,23 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { KontoComponent } from './konto/konto.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { KontoTableComponent } from './konto-table/konto-table.component';
+import { MatTableModule, MatPaginatorModule, MatSortModule } from '@angular/material';
 
 @NgModule({
   declarations: [
     AppComponent,
-    KontoComponent
+    KontoComponent,
+    KontoTableComponent
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule
   ],
   providers: [],
   bootstrap: [AppComponent]
