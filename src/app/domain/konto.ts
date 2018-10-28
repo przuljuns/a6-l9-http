@@ -1,3 +1,3 @@
 export class Konto {
-  constructor(public id: number, public name: string, public account: string ) { }
+  constructor(public id: number, public naziv: string, public racun: string ) { }
 }
